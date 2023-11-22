@@ -15,6 +15,7 @@ $desktop-breakpoint: 1280px;
 
   @media (min-width: $tablet-breakpoint) {
     --site-padding: 1.5rem;
+    --letter-width: 50rem;
 
     --text-heading-size: 2.5rem;
     --text-subheading-size: 2rem;
@@ -25,15 +26,17 @@ $desktop-breakpoint: 1280px;
     --text-nav-size: 1.25rem;
     --text-small-size: 1rem;
   }
+
+  @media (min-width: $desktop-breakpoint) {
+    --letter-width: 65rem;
+  }
 }
 
 $site-padding: var(--site-padding);
 $letter-width: var(--letter-width);
 
-$color-primary: #fdfefe;
-$color-highlight: #efe5f1;
-$color-image-fallback: #dde1e6;
-$color-accent: #430e49;
-$color-accent-secondary: #a046af;
-$color-accent-tertiary: #a96ba6;
-$color-main-gradient: linear-gradient(0deg, #1e082d, #430e49 25%, #541150 50%, #430e49 75%, #1e082d);
+$color-primary: #21295C;
+$color-secondary: #1B3B6F;
+$color-light-primary: #1C7293;
+$color-light-secondary: #9EB3C2;
+$color-font-primary: #FFFFFF;

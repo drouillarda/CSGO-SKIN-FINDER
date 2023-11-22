@@ -1,0 +1,16 @@
+@use "./../../styles/variables" as *;
+@use "./../../styles/mixins" as *;
+
+.search {
+    background-color: $color-light-secondary;
+    width: 100%;
+    outline: none;
+    border: none;
+    &__container {
+        display: flex;
+        padding: 0.8125rem;
+        border: 0.1875rem solid $color-light-primary;
+        border-radius: 3.125rem;
+        background-color: $color-light-secondary;
+    }
+}

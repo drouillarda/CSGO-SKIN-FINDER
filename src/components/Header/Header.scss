@@ -1,0 +1,13 @@
+@use "./../../styles/variables" as *;
+@use "./../../styles/mixins" as *;
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid $color-light-secondary;
+    @include nav-text;
+}
