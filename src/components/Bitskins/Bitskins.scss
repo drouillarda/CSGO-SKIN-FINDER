@@ -1,0 +1,22 @@
+@use "./../../styles/variables" as *;
+@use "./../../styles/mixins" as *;
+
+.market {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid $color-light-secondary;
+    padding: 1rem 0 1rem 0;
+    width: 100vw;
+    &__heading {
+        padding-bottom: .5rem;
+        font-weight: 600;
+    }
+    &__details {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+    }
+}

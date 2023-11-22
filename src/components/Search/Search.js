@@ -1,4 +1,5 @@
 import './Search.scss';
+import searchIcon from './../../assets/icons/search_FILL0_wght400_GRAD0_opsz24.svg'
 import { useEffect, useState } from 'react';
 
 export const Search = ({ defaultValue }) => {
@@ -9,13 +10,13 @@ export const Search = ({ defaultValue }) => {
     }, []);
     return (
         <div className="search__container">
-            <img className="search__icon" alt="search icon" />
+            <img className="search__icon" src={searchIcon} alt="search icon" />
             <input
                 className="search"
                 type="text"
                 name="search"
                 id="search"
-                placeholder="Search for a title"
+                placeholder="Search for a skin"
                 value={query}
                 onChange={e => setQuery(e.target.value)}
             />

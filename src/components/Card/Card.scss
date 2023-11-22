@@ -1,0 +1,12 @@
+@use "./../../styles/variables" as *;
+@use "./../../styles/mixins" as *;
+
+.card {
+    border-radius: 1rem;
+    &__img {
+        max-height: 8rem;
+        max-width: 14rem;
+        border-radius: .5rem;
+        box-shadow: 2px 4px 20px rgba(black, 50%);
+    }
+}

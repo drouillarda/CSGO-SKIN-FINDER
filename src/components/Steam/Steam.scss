@@ -1,0 +1,38 @@
+@use "./../../styles/variables" as *;
+@use "./../../styles/mixins" as *;
+
+.steam {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid $color-light-secondary;
+    border-bottom: 2px solid $color-light-secondary;
+    padding: 1rem 0 1rem 0;
+    width: 100vw;
+    &__heading {
+        padding-bottom: .5rem;
+        font-weight: 600;
+    }
+    &__lower {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: .5rem;
+        @include tablet {
+            flex-direction: row;
+            text-align: start;
+            gap: 2rem;
+        }
+        &--details {
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+            @include tablet {
+                gap: 1.25rem;
+            }
+        }
+    }
+}

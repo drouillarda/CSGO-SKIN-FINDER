@@ -10,4 +10,7 @@
     padding-bottom: 1rem;
     border-bottom: 2px solid $color-light-secondary;
     @include nav-text;
+    @include tablet {
+        @include heading;
+    }
 }
