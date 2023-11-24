@@ -11,12 +11,16 @@
         @include desktop {
             position: absolute;
             margin-left: -100%;
-            margin-top: 26rem;
+            margin-top: 27.25rem;
+            border-bottom: none;
         }
     }
     &__heading {
         padding: 1rem;
         @include card-label;
+        @include desktop {
+            padding-left: 2.75rem;
+        }
     }
     &__images {
         display: flex;
