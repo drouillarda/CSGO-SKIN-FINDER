@@ -1,0 +1,31 @@
+@use "./../../styles/variables" as *;
+@use "./../../styles/mixins" as *;
+
+.history {
+    display: none;
+    @include tablet {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        border-bottom: 2px solid $color-light-secondary;
+    }
+    &__heading {
+        padding: 1rem;
+        @include card-label;
+    }
+    &__images {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        margin: 1rem auto 1rem auto;
+        &--img {
+            max-height: 8rem;
+            max-width: 14rem;
+            border-radius: .5rem;
+            @include desktop {
+                max-height: 10rem;
+                max-width: 18rem;
+            }
+        }
+    }
+}
