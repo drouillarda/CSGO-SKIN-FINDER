@@ -1,5 +1,5 @@
 import "./Dmarket.scss";
-import { Card } from "../Card/Card";
+import ak from './../../assets/images/Ak-47.jpg';
 
 export const Dmarket = () => {
     return (
@@ -7,7 +7,7 @@ export const Dmarket = () => {
             <div className="market__card">
                 <h2 className="market__card--heading">Dmarket</h2>
                 <div className="market__card--lower">
-                    <Card />
+                    <img className="steam__card--lower--img" src={ak} alt="Ak-47" />
                     <div className="market__card--lower--details">
                         <p>Ak-47, Minwear</p>
                         <p>Float</p>

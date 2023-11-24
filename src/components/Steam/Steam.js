@@ -1,5 +1,5 @@
 import "./Steam.scss";
-import { Card } from "../Card/Card";
+import ak from './../../assets/images/Ak-47.jpg';
 
 export const Steam = () => {
     return (
@@ -7,7 +7,7 @@ export const Steam = () => {
             <div className="steam__card">
                 <h2 className="steam__card--heading">Steam Marketplace</h2>
                 <div className="steam__card--lower">
-                    <Card />
+                    <img className="steam__card--lower--img" src={ak} alt="Ak-47" />
                     <div className="steam__card--lower--details">
                         <p>Ak-47, Minwear</p>
                         <p>Float</p>

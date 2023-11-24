@@ -20,13 +20,6 @@
         border-radius: .5rem;
         box-shadow: 2px 4px 20px rgba(black, 50%);
         width: 80%;
-        &--heading {
-            padding-bottom: .5rem;
-            font-weight: 600;
-            @include tablet {
-                
-            }
-        }
         &--lower {
             display: flex;
             flex-direction: column;
