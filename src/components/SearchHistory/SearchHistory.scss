@@ -8,6 +8,11 @@
         flex-direction: column;
         width: 100vw;
         border-bottom: 2px solid $color-light-secondary;
+        @include desktop {
+            position: absolute;
+            margin-left: -100%;
+            margin-top: 26rem;
+        }
     }
     &__heading {
         padding: 1rem;

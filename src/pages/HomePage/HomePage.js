@@ -19,7 +19,7 @@ export const HomePage = () => {
                 <Dmarket />
                 <Bitskins />
             </section>
-            <section>
+            <section className="home__bottom">
                 <SearchHistory />
             </section>
         </section>
