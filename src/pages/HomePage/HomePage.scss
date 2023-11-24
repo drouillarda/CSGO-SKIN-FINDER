@@ -8,4 +8,7 @@
     align-items: center;
     padding-top: 1rem;
     width: 100vw;
+    @include tablet {
+        
+    }
 }
