@@ -2,16 +2,21 @@
 @use "./../../styles/mixins" as *;
 
 .search {
-    background-color: $color-light-secondary;
-    border-radius: 3.125rem;
-    width: 100%;
+    width: 80%;
     outline: none;
     border: none;
+    background-color: $color-light-secondary;
+    border-radius: 3.125rem;
+    margin: 0 auto 0 auto;
+    @include tablet {
+        width: 70%;
+    }
     &__container {
         display: flex;
         border: 0.1875rem solid $color-light-primary;
         border-radius: 3.125rem;
         background-color: $color-light-secondary;
+        width: 100%;
     }
     &__icon {
         color: $color-light-secondary;

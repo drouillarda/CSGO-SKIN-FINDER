@@ -2,7 +2,7 @@
 @use "./../../styles/mixins" as *;
 
 .steam {
-    margin-top: 1rem;
+    margin-top: 2rem;
     display: flex;
     flex-direction: column;
     gap: .5rem;
@@ -10,8 +10,15 @@
     align-items: center;
     border-top: 2px solid $color-light-secondary;
     border-bottom: 2px solid $color-light-secondary;
-    padding: 1rem 0 1rem 0;
+    padding: 1.5rem 0 1.5rem 0;
     width: 100vw;
+    @include desktop {
+        width: 30vw;
+        border-top: none;
+        border-bottom: none;
+        margin: 0 auto 0 auto;
+        padding: 3rem 0 3rem 0;
+    }
     &__card {
         display: flex;
         flex-direction: column;
@@ -20,10 +27,14 @@
         height: 17.5rem;
         background-color: $color-secondary;
         border-radius: .5rem;
-        box-shadow: 2px 4px 20px rgba(black, 50%);
+        box-shadow: 2px 4px 40px rgba(#FFFFFF, 25%);
         width: 80%;
         @include tablet {
-            width: 60%;
+            width: 70%;
+            @include desktop {
+                height: 30rem;
+                width: 90%;
+            }
         }
         &--lower {
             display: flex;
@@ -34,11 +45,19 @@
                 flex-direction: row;
                 text-align: start;
                 gap: 2rem;
+                @include desktop {
+                    flex-direction: column;
+                    text-align: center;
+                }
             }
             &--img {
                     max-height: 8rem;
                     max-width: 14rem;
                     border-radius: .5rem;
+                    @include desktop {
+                        max-height: 10rem;
+                        max-width: 18rem;
+                    }
             }
             &--details {
                 display: flex;

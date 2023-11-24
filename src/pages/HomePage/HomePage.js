@@ -7,11 +7,17 @@ import { Bitskins } from '../../components/Bitskins/Bitskins';
 export const HomePage = () => {
     return (
         <section className="home">
-            <h5>Search for a skin below:</h5>
-            <Search />
-            <Steam />
+            <section className="home__left">
+                <h5>Search for a skin below:</h5>
+                <Search />
+                <Steam />
+            </section>
+            <section className="home__right">
             <Dmarket />
             <Bitskins />
+            <Dmarket />
+            <Bitskins />
+            </section>
         </section>
     );
 };

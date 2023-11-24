@@ -9,17 +9,19 @@ export const Search = ({ defaultValue }) => {
         defaultValue && setQuery(defaultValue);
     }, []);
     return (
-        <div className="search__container">
-            <img className="search__icon" src={searchIcon} alt="search icon" />
-            <input
-                className="search"
-                type="text"
-                name="search"
-                id="search"
-                placeholder="Search for a skin"
-                value={query}
-                onChange={e => setQuery(e.target.value)}
-            />
-        </div>
+        <article className="search">
+            <div className="search__container">
+                <img className="search__icon" src={searchIcon} alt="search icon" />
+                <input
+                    className="search"
+                    type="text"
+                    name="search"
+                    id="search"
+                    placeholder="Search for a skin"
+                    value={query}
+                    onChange={e => setQuery(e.target.value)}
+                />
+            </div>
+        </article>
     )
 }
