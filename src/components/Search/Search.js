@@ -2,12 +2,18 @@ import './Search.scss';
 import searchIcon from './../../assets/icons/search_FILL0_wght400_GRAD0_opsz24.svg'
 import { useEffect, useState } from 'react';
 
-export const Search = ({ defaultValue }) => {
+export const Search = ({ defaultValue, handleSearchChange }) => {
     const [query, setQuery] = useState("");
-
     useEffect(() => {
         defaultValue && setQuery(defaultValue);
-    }, []);
+    }, [defaultValue]);
+
+    const handleChange = (e) => {
+        const newQuery = e.target.value;
+        setQuery(newQuery);
+        handleSearchChange(newQuery);
+      };
+
     return (
         <article className="search">
             <div className="search__container">
@@ -19,7 +25,7 @@ export const Search = ({ defaultValue }) => {
                     id="search"
                     placeholder="Search for a skin"
                     value={query}
-                    onChange={e => setQuery(e.target.value)}
+                    onChange={handleChange}
                 />
             </div>
         </article>

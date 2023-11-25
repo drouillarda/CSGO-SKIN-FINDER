@@ -12,14 +12,15 @@ export const Bitskins = () => {
     useEffect(() => {
         const getSkins = async (skinId) => {
             try {
-                const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Bitskins/${skinId}`)
+                const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/Bitskins/${skinId}`)
                 const info = response.data;
+                console.log(info);
                 setSkin(info);
             } catch (error) {
                 console.log(error);
             }
         };
-        getSkins(skinId);
+        getSkins(skinId || "123");
     }, [skinId]);
 
     return (
