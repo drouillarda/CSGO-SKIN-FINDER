@@ -5,14 +5,13 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-export const Bitskins = () => {
+export const Bitskins = ({ searchQuery }) => {
     const [skin, setSkin] = useState(null);
-    const { skinId } = useParams();
 
     useEffect(() => {
-        const getSkins = async (skinId) => {
+        const getSkins = async () => {
             try {
-                const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/Bitskins/${skinId}`)
+                const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/BitskinsName?searchSkins=${searchQuery}`)
                 const info = response.data;
                 console.log(info);
                 setSkin(info);
@@ -20,8 +19,8 @@ export const Bitskins = () => {
                 console.log(error);
             }
         };
-        getSkins(skinId || "123");
-    }, [skinId]);
+        getSkins();
+    }, [searchQuery]);
 
     return (
         <article className="bitskins">
