@@ -5,6 +5,7 @@ import { Dmarket } from '../../components/Dmarket/Dmarket';
 import { Bitskins } from '../../components/Bitskins/Bitskins';
 import { SearchHistory } from '../../components/SearchHistory/SearchHistory';
 import { useState } from 'react';
+import { Skinport } from '../../components/Skinport/Skinport';
 
 export const HomePage = () => {
     const [searchQuery, setSearchQuery] = useState("");
@@ -25,6 +26,7 @@ export const HomePage = () => {
             <section className="home__right">
                 <Dmarket searchQuery={searchQuery} />
                 <Bitskins searchQuery={searchQuery} />
+                <Skinport searchQuery={searchQuery} />
             </section>
             <section className="home__bottom">
                 <SearchHistory />
