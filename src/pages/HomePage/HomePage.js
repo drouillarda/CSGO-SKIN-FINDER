@@ -4,7 +4,6 @@ import { Steam } from '../../components/Steam/Steam';
 import { Dmarket } from '../../components/Dmarket/Dmarket';
 import { Bitskins } from '../../components/Bitskins/Bitskins';
 import { SearchHistory } from '../../components/SearchHistory/SearchHistory';
-import { useLocation } from 'react-router-dom';
 import { useState } from 'react';
 
 export const HomePage = () => {
@@ -24,8 +23,6 @@ export const HomePage = () => {
                 <Steam />
             </section>
             <section className="home__right">
-                <Dmarket searchQuery={searchQuery} />
-                <Bitskins searchQuery={searchQuery} />
                 <Dmarket searchQuery={searchQuery} />
                 <Bitskins searchQuery={searchQuery} />
             </section>

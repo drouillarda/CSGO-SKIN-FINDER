@@ -1,6 +1,7 @@
 import './Search.scss';
 import searchIcon from './../../assets/icons/search_FILL0_wght400_GRAD0_opsz24.svg'
 import { useEffect, useState } from 'react';
+import { debounce } from 'lodash';
 
 export const Search = ({ defaultValue, onSearchChange }) => {
     const [query, setQuery] = useState("");
@@ -12,13 +13,16 @@ export const Search = ({ defaultValue, onSearchChange }) => {
         const newQuery = e.target.value;
         setQuery(newQuery);
         onSearchChange(newQuery);
+        debouncedSearchSubmit(newQuery);
       };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log("Search requested");
+    const handleSubmit = () => {
+        console.log("search requested")
+        onSearchChange(query);
     }
-
+    
+    const debouncedSearchSubmit = debounce(handleSubmit, 300);
+    
     return (
         <article className="search">
             <div className="search__container">

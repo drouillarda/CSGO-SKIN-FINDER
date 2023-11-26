@@ -11,7 +11,7 @@ export const Bitskins = ({ searchQuery }) => {
     useEffect(() => {
         const getSkins = async () => {
             try {
-                const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/BitskinsName?searchSkins=${searchQuery}`)
+                const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/Bitskins/${searchQuery}`)
                 const info = response.data;
                 console.log(info);
                 setSkin(info);
@@ -30,8 +30,8 @@ export const Bitskins = ({ searchQuery }) => {
                 <div className="bitskins__card--lower">
                 <img className="bitskins__card--lower--img" src={ak} alt="Ak-47" />
                     <div className="bitskins__card--lower--details">
-                        <p>Skin:{skin.name}</p>
-                        <p>Price:{skin.price_min}</p>
+                        <p>{skin.name}</p>
+                        <p>{skin.price_min}</p>
                     </div>
                 </div>
             </div>
