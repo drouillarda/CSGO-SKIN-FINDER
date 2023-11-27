@@ -16,6 +16,8 @@ export const Steam = ({ searchQuery }) => {
                     const info = response.data;
                     console.log(info);
                     setSkin(info);
+
+                    localStorage.setItem('lastSearchImage', info.image);
                 } catch (error) {
                     console.log(error);
                 } finally {
@@ -45,7 +47,6 @@ export const Steam = ({ searchQuery }) => {
           };
           
           const lastWeekMedianPrice = calculateMedianPriceLastWeek(medianPrices);
-
           if (lastWeekMedianPrice !== null) {
             const medianPriceRounded = lastWeekMedianPrice.toFixed(2);
             console.log('Median Price Last Week:', medianPriceRounded);
@@ -56,7 +57,6 @@ export const Steam = ({ searchQuery }) => {
         <article className="steam">
             {loading && <p>Loading...</p>}
             {skin && (
-            <Link to={{ pathname: skin.url}}>
                 <div className="steam__card">
                     <h2 className="steam__card--heading">Steam Marketplace</h2>
                     <div className="steam__card--lower">
@@ -64,11 +64,10 @@ export const Steam = ({ searchQuery }) => {
                         <div className="steam__card--lower--details">
                             <p>{skin.market_hash_name}</p>
                             <p>Lowest Price: ${lowestPrice}</p>
-                            <p>Median Price past week: ${lastWeekMedianPrice}</p> 
+                            <p>Median Price past week: ${(lastWeekMedianPrice)?.toFixed(2)}</p> 
                         </div>
                     </div>
                 </div>
-            </Link>
             )}
         </article>
     );

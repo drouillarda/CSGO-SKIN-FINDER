@@ -13,6 +13,7 @@
     @include desktop {
         width: 33vw;
         border-right: 2px solid $color-light-secondary;
+        border-bottom: none;
         padding: 3rem 0 3rem 0;
     }
     &__card {

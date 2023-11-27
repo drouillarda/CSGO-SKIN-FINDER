@@ -26,6 +26,10 @@ export const Bitskins = ({ searchQuery }) => {
         getSkins();
     }, [searchQuery]);
 
+    const changePrice = (priceInCents) => {
+        return (priceInCents / 1000).toFixed(2);
+    }
+
     return (
         <article className="bitskins">
             {loading && <p>Loading...</p>}
@@ -36,7 +40,7 @@ export const Bitskins = ({ searchQuery }) => {
                 <img className="bitskins__card--lower--img" src={notAvailable} alt="Not Available" />
                     <div className="bitskins__card--lower--details">
                         <p>{skin.name}</p>
-                        <p>{skin.price_min}</p>
+                        <p>Lowest Price: ${changePrice(skin.price_min)}</p>
                     </div>
                 </div>
             </div>
