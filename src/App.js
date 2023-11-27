@@ -1,25 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import { useEffect } from 'react';
+import { useState } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HomePage } from './pages/HomePage/HomePage';
+import { Header } from './components/Header/Header';
+import { Footer } from './components/Footer/Footer';
 
-function App() {
+export function App() {
+  const [searched, setSearchedQuery] = useState([]);
+
+  const handleAddSearch = search => {
+    const localStorageListRaw = localStorage.getItem("searchQuery") || "[]";
+    const localStorageList = JSON.parse(localStorageListRaw);
+
+    if (!localStorageList.map(entry => entry.id).includes(search.id)) {
+      localStorageList.push(search);
+      setSearchedQuery([...localStorageList]);
+      localStorage.setItem("searchQuery", JSON.stringify(localStorageList));
+    } else {
+      const filteredList = localStorageList.filter(entry => entry.id !== search.id);
+      localStorage.setItem("searchQuery", JSON.stringify(filteredList));
+      setSearchedQuery([...filteredList]);
+    }
+  }
+
+  useEffect(() => {
+    const localStorageListRaw = localStorage.getItem("searchQuery");
+    localStorageListRaw && setSearchedQuery(JSON.parse(localStorageListRaw));
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" 
+        element={<HomePage searched={searched} handleAdd={handleAddSearch}/>} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
   );
 }
 
-export default App;
+

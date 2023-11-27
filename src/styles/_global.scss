@@ -1,0 +1,20 @@
+@use './mixins' as *;
+@use './variables' as *;
+
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: AsapCondensed;
+}
+
+h2 {
+    font-family: Tourney;
+    font-weight: 400;
+    padding-bottom: 1rem;
+    @include card-label;
+    @include tablet {
+        padding-bottom: 3rem;
+    }
+}
