@@ -1,70 +1,81 @@
-# Getting Started with Create React App
+# CSGO Skin Finder
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+1. Skin Search and Selection:
+   Provide a search bar where users can enter the name or details of the CS:GO skin they are interested in.
+   Implement an autocomplete feature to help users find the exact skin they are looking for.
+2. Price Aggregation:
+   Integrate with multiple CS:GO skin trading sites through APIs to fetch real-time price data.
+3. Price Comparison:
+   Display a list of the lowest prices for the selected CS:GO skin from various trading sites in a clear and organized manner.
+4. Historical Price Data:
+   Provide a historical(weekly) price chart for the selected skin, allowing users to track price trends over time.
 
-In the project directory, you can run:
+### Problem
 
-### `npm start`
+Users usually have to look on multiple sites to compare prices, I'm taking that out of the equation and giving them one stop to find the best price.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### User Profile
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Any CSGO player who likes to buy and sell skins would benefit from the app.
 
-### `npm test`
+### Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Multiple API calls,
+Multiple states and changes,
+Rendering JSON to the virtual DOM,
+Functions to convert currencies,
+Multiple routes for each API being used, along with different endpoints,
 
-### `npm run build`
+### Tech Stack
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+React,
+Node,
+Express,
+Axios,
+LocalStorage,
+Controllers,
+Middleware,
+Routes,
+CORS,
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### APIs
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+https://steamapis.com/docs,
+https://api.dmarket.com,
+https://api.skinport.com,
+https://api.bitskins.com,
 
-### `npm run eject`
+### Sitemap
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Will be a single page application to begin with, later on multiple pages will be added to have users sign in, view stats and/or best selling skins.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Mockups
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Provide visuals of your app's screens. You can use tools like Figma or pictures of hand-drawn sketches.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Data
 
-## Learn More
+Describe your data and the relationships between them. You can show this visually using diagrams, or write it out.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Endpoints
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+List endpoints that your server will implement, including HTTP methods, parameters, and example responses.
 
-### Code Splitting
+### Auth
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Does your project include any login or user profile functionality? If so, describe how authentication/authorization will be implemented.
+No login or user profile functionality will be added until Sprint 3.
 
-### Analyzing the Bundle Size
+## Roadmap
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Sprint 1 - Completing all styling and layout
+Sprint 2 - Implementing all API calls
+Sprint 3 - Implementing Nice-to-haves
 
-### Making a Progressive Web App
+## Nice-to-haves
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+User login and authentication,
+CSGO profile stats page,
+Best selling skins page
