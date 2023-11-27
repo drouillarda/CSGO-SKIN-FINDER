@@ -7,7 +7,7 @@ import { SearchHistory } from '../../components/SearchHistory/SearchHistory';
 import { useState } from 'react';
 import { Skinport } from '../../components/Skinport/Skinport';
 
-export const HomePage = () => {
+export const HomePage = ({ searched }) => {
     const [searchQuery, setSearchQuery] = useState("");
     const handleSearchChange = (newQuery) => {
         setSearchQuery(newQuery);
@@ -21,7 +21,7 @@ export const HomePage = () => {
             <section className="home__left">
                 <h5>Search for a skin below:</h5>
                 <Search defaultValue={searchQuery} onSearchChange={handleSearchChange} />
-                <Steam />
+                <Steam searchQuery={searchQuery} searched={searched} />
             </section>
             <section className="home__right">
                 <Dmarket searchQuery={searchQuery} />

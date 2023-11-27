@@ -13,15 +13,11 @@ export const Search = ({ defaultValue, onSearchChange }) => {
         const newQuery = e.target.value;
         setQuery(newQuery);
         onSearchChange(newQuery);
-        debouncedSearchSubmit(newQuery);
-      };
 
-    const handleSubmit = () => {
-        console.log("search requested")
-        onSearchChange(query);
-    }
+        localStorage.setItem('lastSearchQuery', newQuery);
+      };
     
-    const debouncedSearchSubmit = debounce(handleSubmit, 300);
+
     
     return (
         <article className="search">
@@ -35,7 +31,6 @@ export const Search = ({ defaultValue, onSearchChange }) => {
                     placeholder="Search for a skin"
                     value={query}
                     onChange={handleChange} 
-                    onKeyUp={handleSubmit}
                 />
             </div>
         </article>

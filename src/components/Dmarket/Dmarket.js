@@ -7,16 +7,20 @@ import { useParams } from "react-router-dom";
 
 export const Dmarket = ({ searchQuery }) => {
     // const [skin, setSkin] = useState(null);
+    // const [loading, setLoading] = useState(true);
 
     // useEffect(() => {
     //     const getSkins = async () => {
     //         try {
+    //             setLoading(true);
     //             const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/Dmarket/${searchQuery}`)
     //             const info = response.data;
     //             console.log(info);
     //             setSkin(info);
     //         } catch (error) {
     //             console.log(error);
+    //         } finally {
+    //             setLoading(false);    
     //         }
     //     };
     //     getSkins();
@@ -24,6 +28,7 @@ export const Dmarket = ({ searchQuery }) => {
     
     // return (
     //     <article className="dmarket">
+    //        {loading && <p>Loading...</p>}
     //         {skin && (
     //         <div className="dmarket__card">
     //             <h2 className="dmarket__card--heading">Dmarket</h2>
