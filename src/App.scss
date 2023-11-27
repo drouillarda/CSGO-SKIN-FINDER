@@ -1,0 +1,10 @@
+@use "./styles/reset";
+@use "./styles/fonts";
+@use "./styles/global";
+@use "./styles/variables" as *;
+
+#root {
+    min-height: 100svh;
+    background-color: $color-primary;
+    color: $color-font-primary;
+}

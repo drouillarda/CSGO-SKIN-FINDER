@@ -1,0 +1,40 @@
+@use "./../../styles/variables" as *;
+@use "./../../styles/mixins" as *;
+
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+    width: 100vw;
+    @include desktop  {
+        flex-direction: row;
+        border-bottom: 2px solid $color-light-secondary;
+        padding-top: 0;
+    }
+    &__left {
+        text-align: center;
+        h5 {
+            padding-bottom: 1rem;
+        }
+        @include desktop {
+            width: 34vw;
+            h5 {
+                padding-top: 2rem;
+                padding-bottom: 1rem;
+            }
+        }
+    }
+    &__right {
+            @include desktop {
+                border-left: 2px solid $color-light-secondary;
+                width: 66vw;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+                max-width: 66vw;
+                margin: 0 auto 0 auto;
+        }
+    }
+}
