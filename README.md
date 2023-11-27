@@ -4,7 +4,6 @@
 
 1. Skin Search and Selection:
    Provide a search bar where users can enter the name or details of the CS:GO skin they are interested in.
-   Implement an autocomplete feature to help users find the exact skin they are looking for.
 2. Price Aggregation:
    Integrate with multiple CS:GO skin trading sites through APIs to fetch real-time price data.
 3. Price Comparison:
@@ -78,4 +77,5 @@ Sprint 3 - Implementing Nice-to-haves
 
 User login and authentication,
 CSGO profile stats page,
-Best selling skins page
+Best selling skins page,
+Auto Complete feature in search bar
