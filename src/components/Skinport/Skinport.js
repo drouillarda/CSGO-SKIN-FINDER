@@ -32,25 +32,24 @@ export const Skinport = ({ searchQuery }) => {
         return euroAmount * exchangeRateEuroToCAD;
     }
 
-    const euroAmount = skin.min_price;
+    const euroAmount = skin && skin.min_price ? skin.min_price : 0;
     const cadAmount = convertToCAD(euroAmount);
 
     return (
         <article className="skinport">
             {loading && <p>Loading...</p>}
             {skin && (
-            <Link to={{ pathname: skin.item_page}}>
                 <div className="skinport__card">
                     <h2 className="skinport__card--heading">Skinport</h2>
                     <div className="skinport__card--lower">
                     <img className="skinport__card--lower--img" src={notAvailable} alt="Not Available" />
                         <div className="skinport__card--lower--details">
                             <p>{skin.market_hash_name}</p>
-                            <p>Lowest Price: ${cadAmount}</p>
+                            <p>Lowest Price: ${(cadAmount)?.toFixed(2)}</p>
+                            <p>Quantity: {skin.quantity}</p>
                         </div>
                     </div>
                 </div>
-            </Link>
             )}
         </article>
     );
