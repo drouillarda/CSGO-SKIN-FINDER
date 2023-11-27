@@ -53,6 +53,9 @@ export const Steam = ({ searchQuery }) => {
           } 
           console.log('Median Price Last Week:', lastWeekMedianPrice);
 
+          const quantity = skin?.histogram?.sell_order_array ? Math.min(...skin.histogram.sell_order_array.map(order => order.quantity)) : null;
+
+
     return (
         <article className="steam">
             {loading && <p>Loading...</p>}
@@ -64,7 +67,8 @@ export const Steam = ({ searchQuery }) => {
                         <div className="steam__card--lower--details">
                             <p>{skin.market_hash_name}</p>
                             <p>Lowest Price: ${lowestPrice}</p>
-                            <p>Median Price past week: ${(lastWeekMedianPrice)?.toFixed(2)}</p> 
+                            <p>Median Price past week: ${(lastWeekMedianPrice)?.toFixed(2)}</p>
+                            <p>Quantity: {quantity}</p> 
                         </div>
                     </div>
                 </div>

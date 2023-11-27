@@ -1,5 +1,4 @@
 import './SearchHistory.scss';
-import ak from './../../assets/images/Ak-47.jpg';
 
 export const SearchHistory = () => {
 
