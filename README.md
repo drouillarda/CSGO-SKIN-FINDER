@@ -45,6 +45,7 @@ https://steamapis.com/docs,
 https://api.dmarket.com,
 https://api.skinport.com,
 https://api.bitskins.com,
+https://api.skinbaron.de
 
 ### Sitemap
 
