@@ -3,7 +3,7 @@ import './SearchHistory.scss';
 export const SearchHistory = () => {
 
     const lastSearchQuery = localStorage.getItem('lastSearchQuery');
-    const lastSearchImage = localStorage.getItem('lastSsearchImage');
+    const lastSearchImage = localStorage.getItem('lastSearchImage');
 
     return (
         <section className="history">
